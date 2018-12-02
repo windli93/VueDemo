@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Spring-Vue.iml" filepath="$PROJECT_DIR$/.idea/Spring-Vue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-Vue.api/Spring-Vue.api.iml" filepath="$PROJECT_DIR$/Spring-Vue.api/Spring-Vue.api.iml" />
+    </modules>
+  </component>
+</project>
