@@ -3,7 +3,6 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -12,11 +11,16 @@
     </parent>
 
     <modules>
-        <module>Spring-Vue.api</module>
+        <module>Spring-Vue.dao</module>
+        <module>Spring-Vue.domain</module>
+        <module>Spring-Vue.impl</module>
+        <module>Spring-Vue.web</module>
+        <module>Spring-Vue.service</module>
     </modules>
 
-    <artifactId>Spring-Vue</artifactId>
-    <name>Spring-Vue</name>
+    <artifactId>Spring-Vue-Server</artifactId>
+    <name>Spring-Vue-Server</name>
+    <version>0.0.1-SNAPSHOT</version>
 
     <!-- 主要依赖库的版本定义 -->
     <properties>
