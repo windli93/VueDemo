@@ -4,9 +4,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.springframework.boot</groupId>
-	<artifactId>Spring-Vue.api</artifactId>
+	<artifactId>Spring-Vue.dao</artifactId>
 
-	<name>demo</name>
+	<name>Spring-Vue.dao</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

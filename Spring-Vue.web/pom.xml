@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.springframework.boot</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>Spring-Vue.web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>demo</name>
+	<name>Spring-Vue.web</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
