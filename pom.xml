@@ -20,6 +20,7 @@
 
     <artifactId>Spring-Vue-Server</artifactId>
     <name>Spring-Vue-Server</name>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
     <!-- 主要依赖库的版本定义 -->
@@ -72,6 +73,14 @@
                 <configuration>
                     <verbose>true</verbose>
                     <overwrite>true</overwrite>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>
