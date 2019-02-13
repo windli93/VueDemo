@@ -1,14 +1,17 @@
 package cn.com.github;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @description:
  * @author: ragrokli
  * @create: 2019-02-13 11:21
  **/
-public class WelcomeApp extends Thread{
+@Slf4j
+public class WelcomeApp extends Thread {
 
     @Override
     public void run() {
-        System.out.printf("1.welcome 我是：",Thread.currentThread().getName());
+        log.info("1.welcome 我是：{}", Thread.currentThread().getName());
     }
 }
