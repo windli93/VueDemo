@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <script src="../vue2.6/vue.js"></script>
+    <div id="root">
+        <div v-on:click="click">{{content}}</div>
+    </div>
+    <script>
+        new new Vue({
+            el: "#root",
+            data: {
+                content: "hello"
+            },
+            methods: {
+                click: function(){
+                    this.content = "world"
+                }
+            },
+        })
+    </script>
+</html>
