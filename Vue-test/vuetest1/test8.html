@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <script src="../vue2.6/vue.js"></script>
+    </head>
+    <body>
+    <div id="root">
+        姓：<input v-model="firstName" />
+        名：<input v-model="lastName"  />
+        <br/> 
+        姓名：<div>{{fullName}}</div>
+        姓名：<div>{{count}}</div>
+    </div>
+    <script>
+        new Vue({
+            el: "#root",
+            data: {
+                firstName: "this is firstName",
+                lastName: "this is lastName",
+                count: 0
+            },
+            computed: {
+                fullName: function(){
+                    return this.firstName + ' ' + this.lastName
+                }
+            },
+            watch: {
+                fullName: function(){
+                    return this.count++;
+                }
+            },
+        })
+    </script>
+    </body>
+</html>
