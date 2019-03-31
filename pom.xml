@@ -11,17 +11,17 @@
     </parent>
 
     <modules>
-        <module>Spring-Vue.dao</module>
-        <module>Spring-Vue.domain</module>
-        <module>Spring-Vue.impl</module>
-        <module>Spring-Vue.web</module>
-        <module>Spring-Vue.api</module>
-        <module>Spring-Vue.service</module>
+        <module>Spring-Sign.dao</module>
+        <module>Spring-Sign.domain</module>
+        <module>Spring-Sign.impl</module>
+        <module>Spring-Sign.web</module>
+        <module>Spring-Sign.api</module>
+        <module>Spring-Sign.service</module>
     </modules>
 
     <groupId>cn.com.github</groupId>
-    <artifactId>Spring-Vue-Server</artifactId>
-    <name>Spring-Vue-Server</name>
+    <artifactId>Spring-Sign-Server</artifactId>
+    <name>Spring-Sign-Server</name>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 

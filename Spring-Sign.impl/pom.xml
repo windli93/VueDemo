@@ -3,17 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.com.github</groupId>
-    <artifactId>Spring-Vue.impl</artifactId>
+    <artifactId>Spring-Sign.impl</artifactId>
     <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>Spring-Vue.impl</name>
+    <name>Spring-Sign.impl</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>Spring-Vue-Server</artifactId>
+        <groupId>cn.com.github</groupId>
+        <artifactId>Spring-Sign-Server</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -33,6 +32,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.6.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.6</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

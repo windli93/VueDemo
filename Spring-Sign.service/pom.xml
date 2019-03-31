@@ -3,14 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>cn.com.github</groupId>
-	<artifactId>Spring-Vue.dao</artifactId>
-	<name>Spring-Vue.dao</name>
+	<artifactId>Spring-Sign.service</artifactId>
+	<packaging>pom</packaging>
+	<name>Spring-Sign.service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>Spring-Vue-Server</artifactId>
+		<groupId>cn.com.github</groupId>
+		<artifactId>Spring-Sign-Server</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
@@ -32,5 +32,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 </project>
