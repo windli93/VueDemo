@@ -18,6 +18,7 @@
         <module>Spring-Vue.service</module>
     </modules>
 
+    <groupId>cn.com.github</groupId>
     <artifactId>Spring-Vue-Server</artifactId>
     <name>Spring-Vue-Server</name>
     <packaging>pom</packaging>
@@ -35,6 +36,21 @@
     <!-- 版本说明：这里统一管理依赖的版本号 -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>cn.com.github</groupId>
+                <artifactId>Spring-Vue.dao</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.github</groupId>
+                <artifactId>Spring-Vue.domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.github</groupId>
+                <artifactId>Spring-Vue.service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -60,19 +76,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
