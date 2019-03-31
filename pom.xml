@@ -15,6 +15,7 @@
         <module>Spring-Vue.domain</module>
         <module>Spring-Vue.impl</module>
         <module>Spring-Vue.web</module>
+        <module>Spring-Vue.api</module>
         <module>Spring-Vue.service</module>
     </modules>
 
@@ -31,6 +32,7 @@
         <log4j.version>1.2.17</log4j.version>
         <fastjson.version>1.2.47</fastjson.version>
         <lombok.version>1.16.12</lombok.version>
+        <mysql.version>5.1.42</mysql.version>
     </properties>
 
     <!-- 版本说明：这里统一管理依赖的版本号 -->
@@ -51,19 +53,16 @@
                 <artifactId>Spring-Vue.service</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/log4j/log4j -->
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>

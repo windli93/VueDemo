@@ -5,7 +5,7 @@
 
 	<groupId>cn.com.github</groupId>
 	<artifactId>Spring-Vue.service</artifactId>
-
+	<packaging>pom</packaging>
 	<name>Spring-Vue.service</name>
 	<description>Demo project for Spring Boot</description>
 
