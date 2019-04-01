@@ -12,13 +12,28 @@ import java.sql.Time;
 @ToString
 public class BaseEntity {
 
-    private String id;
+    /**
+     * 主键
+     */
+    private Integer id;
 
+    /**
+     * 创建者
+     */
     private String creater;
 
+    /**
+     * 创建时间
+     */
     private Time createTime;
 
+    /**
+     * 修改者
+     */
     private String modifyer;
 
+    /**
+     * 修改时间
+     */
     private Time modifyTime;
 }

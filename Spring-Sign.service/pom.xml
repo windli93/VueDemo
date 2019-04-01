@@ -31,5 +31,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>cn.com.github</groupId>
+			<artifactId>Spring-Sign.domain</artifactId>
+		</dependency>
 	</dependencies>
 </project>

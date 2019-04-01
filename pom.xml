@@ -40,17 +40,17 @@
         <dependencies>
             <dependency>
                 <groupId>cn.com.github</groupId>
-                <artifactId>Spring-Vue.dao</artifactId>
+                <artifactId>Spring-Sign.dao</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.com.github</groupId>
-                <artifactId>Spring-Vue.domain</artifactId>
+                <artifactId>Spring-Sign.domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.com.github</groupId>
-                <artifactId>Spring-Vue.service</artifactId>
+                <artifactId>Spring-Sign.service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
