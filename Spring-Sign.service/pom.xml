@@ -35,6 +35,7 @@
 		<dependency>
 			<groupId>cn.com.github</groupId>
 			<artifactId>Spring-Sign.domain</artifactId>
+			<version>${project.version}</version>
 		</dependency>
-	</dependencies>
+    </dependencies>
 </project>

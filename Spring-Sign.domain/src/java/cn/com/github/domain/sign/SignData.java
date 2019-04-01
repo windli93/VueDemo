@@ -1,7 +1,7 @@
-package cn.com.github.sign;
+package cn.com.github.domain.sign;
 
 
-import cn.com.github.BaseEntity;
+import cn.com.github.domain.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

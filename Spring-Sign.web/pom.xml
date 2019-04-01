@@ -38,11 +38,17 @@
 			<artifactId>spring-boot-starter-dubbo</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>cn.com.github</groupId>
+			<artifactId>Spring-Sign.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<finalName>${project.artifactId}-${project.version}</finalName>
-		<sourceDirectory>src/main/java</sourceDirectory>
+		<sourceDirectory>src/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

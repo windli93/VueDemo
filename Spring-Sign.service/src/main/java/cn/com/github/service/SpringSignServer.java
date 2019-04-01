@@ -1,8 +1,8 @@
-package cn.com.github;
+package cn.com.github.service;
 
-import cn.com.github.sign.SignBase;
-import cn.com.github.sign.SignData;
-import cn.com.github.sign.SignStampBase;
+import cn.com.github.domain.sign.SignBase;
+import cn.com.github.domain.sign.SignData;
+import cn.com.github.domain.sign.SignStampBase;
 
 import java.util.List;
 

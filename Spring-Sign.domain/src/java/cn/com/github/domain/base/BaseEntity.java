@@ -1,4 +1,4 @@
-package cn.com.github;
+package cn.com.github.domain.base;
 
 
 import lombok.Getter;
