@@ -44,7 +44,18 @@
 			<artifactId>Spring-Sign.service</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-    </dependencies>
+
+		<dependency>
+			<groupId>cn.com.github</groupId>
+			<artifactId>Spring-Sign.impl</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<finalName>${project.artifactId}-${project.version}</finalName>

@@ -1,4 +1,4 @@
-package cn.com.github.web.dubbo;
+package cn.com.github.impl.dubbo;
 
 
 import cn.com.github.domain.util.SpringContextUtil;
@@ -10,6 +10,7 @@ import com.alibaba.dubbo.rpc.service.GenericService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 
@@ -17,6 +18,7 @@ import java.util.HashMap;
  * dubbo接口泛化调用
  */
 @Slf4j
+@Component
 public class DubboGenericFactory {
 
     @Autowired
@@ -29,29 +31,34 @@ public class DubboGenericFactory {
     /**
      * Map类型入参获取获取类型泛化接口
      */
-    public Object fetchGenericService(String serviceName, HashMap<String, Object> maps) {
+    public Object fetchGenericService(String interfaceName, HashMap<String, Object> maps) {
 
         GenericService genericService = null;
         try {
-            genericService = SpringContextUtil.getBean(serviceName, GenericService.class);
+            genericService = SpringContextUtil.getBean(interfaceName, GenericService.class);
+            if (genericService == null) {
+                throw new RuntimeException("dubbo 泛化接口获取异常");
+            }
             String methodName = "handler";
             String[] types = new String[]{"java.util.HashMasp"};
             Object[] parames = new Object[]{maps};
             Object object = genericService.$invoke(methodName, types, parames);
-            log.info("");
+            if (object instanceof Throwable) {
+                throw (Exception) object;
+            }
             return object;
         } catch (Exception e) {
-            log.error("异常-{}", e);
-            throw e;
+            log.error("处理dubbo泛化接口异常-{}", e);
+            throw new RuntimeException(e);
         }
     }
 
 
-    public Object fetchGenericService(String serviceName, String methods, Object[] parames, Integer timeoutSec) {
+    public Object fetchGenericService(String interfaceName, String methods, Object[] parames, Integer timeoutSec) {
 
         try {
-            ReferenceConfig<GenericService> referenceConfig = new ReferenceConfig<GenericService>();
-            referenceConfig.setInterface(serviceName);
+            ReferenceConfig<GenericService> referenceConfig = new ReferenceConfig<>();
+            referenceConfig.setInterface(interfaceName);
             referenceConfig.setGeneric(true);
             referenceConfig.setApplication(application);
             referenceConfig.setRegistry(registry);
@@ -79,10 +86,8 @@ public class DubboGenericFactory {
             }
             return object;
         } catch (Exception e) {
-            log.error("调用dubbo 泛化接口异常-{}", e);
+            log.error("处理dubbo泛化接口异常-{}", e);
             throw new RuntimeException(e);
         }
     }
-
-
 }
