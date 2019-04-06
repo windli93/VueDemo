@@ -79,6 +79,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+        <dependency>
+            <groupId>jfx</groupId>
+            <artifactId>jfx-path</artifactId>
+            <scope>system</scope>
+            <systemPath>${basedir}/../lib/jfx-path-2.8.5.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
