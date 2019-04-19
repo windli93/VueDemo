@@ -1,0 +1,32 @@
+
+<html>
+ <head>
+     <!-- vue 组件 -->
+     <!-- 引入vue脚本 -->
+     <script src="../vue2.6/vue.js"></script>
+ </head>
+ <body>
+    <div id= "myApp">
+        <ol>
+           <game-item v-for="(item, index) in items" :key="index" :item="item"></game-item>  
+        </ol>
+    </div>
+    <script>
+      Vue.component('game-item',{
+          props: ['item'],
+          template: '<li>{{item.title}}</li>',
+      })
+
+         var vue = new Vue({
+             el: '#myApp',
+             data: {
+                 items: [
+                     {title: '斗地主'},
+                     {title: '打麻将'},
+                     {title: 'UND'}
+                 ]
+             }
+         })
+    </script>
+ </body>
+</html>
