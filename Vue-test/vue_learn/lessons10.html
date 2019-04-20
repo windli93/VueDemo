@@ -1,0 +1,46 @@
+
+<html charset="utf-8">
+ <head>
+     <!-- 组件属性校验 -->
+     <!-- 引入vue脚本 -->
+     <script src="../vue2.6/vue.js"></script>
+ </head>
+ <body>
+    <div id= "myApp">
+          <h1>身世之谜</h1>
+          <show-member-info name="ragrok" :age="23" :detail="{address: 'earth', language: 'han'}"></show-number-info>
+    </div>
+    <script>     
+         Vue.component('show-member-info',{
+               props: {
+                   name: {
+                       type: String,
+                       required: true,
+                   },
+                   age: {
+                       type: Number,
+                       validator: function(value){
+                             return value >= 0 && value <=130; 
+                       },
+                   },
+                   detail: {
+                       type: Object,
+                       default: function(){
+                           return {
+                              address: 'US',
+                              language: 'English',
+                           }
+                       } 
+                   },
+               },
+               template: '<div>姓名：{{this.name}} <br/>'
+               + '年龄：{{this.age}} 岁 <br/>'
+               + '地址：{{this.detail.address}}<br/>'
+               + '语言：{{this.detail.language}}</div>',
+         });
+         var vue = new Vue({
+             el: '#myApp',
+         });
+    </script>
+ </body>
+</html>

@@ -1,0 +1,41 @@
+
+<html>
+ <head>
+     <!-- 表行组件 -->
+     <!-- 引入vue脚本 -->
+     <script src="../vue2.6/vue.js"></script>
+ </head>
+ <body>
+    <div id= "myApp">
+        <table border="1">
+            <tr>
+              <td>栏位1</td>
+              <td>栏位2</td>
+            </tr>
+            <tr is="row-1"></tr>
+            <tr is="row-2"></tr>
+            <tr is="row-3"></tr>
+        </table>
+    </div>
+    <script>     
+         var row_1 = {
+            template: '<tr><td>1</td><td>今天天气好啊！</td></tr>',
+         };
+         var row_2 = {
+            template: '<tr><td>2</td><td>今天天气很好啊！</td></tr>',
+         };
+         var row_3 = {
+            template: '<tr><td>3</td><td>今天天气非常非常好啊！</td></tr>',
+         };
+         var vue = new Vue({
+             el: '#myApp',
+             components: {
+                 'row-1': row_1,
+                 'row-2': row_2,
+                 'row-3': row_3,
+             },
+         });
+         vue.price = 100;
+    </script>
+ </body>
+</html>

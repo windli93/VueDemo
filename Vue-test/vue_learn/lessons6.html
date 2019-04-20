@@ -1,0 +1,25 @@
+
+<html>
+ <head>
+     <!-- 局部组件 -->
+     <!-- 引入vue脚本 -->
+     <script src="../vue2.6/vue.js"></script>
+ </head>
+ <body>
+    <div id= "myApp">
+         <my-weather></my-weather>
+    </div>
+    <script>     
+         var weather = {
+            template: '<p>今天天气好啊！</p>',
+         };
+         var vue = new Vue({
+             el: '#myApp',
+             components: {
+                 'my-weather': weather,
+             },
+         });
+         vue.price = 100;
+    </script>
+ </body>
+</html>

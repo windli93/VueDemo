@@ -1,0 +1,47 @@
+
+<html charset="utf-8">
+ <head>
+     <!-- 父子组件通信 -->
+     <!-- 引入vue脚本 -->
+     <script src="../vue2.6/vue.js"></script>
+ </head>
+ <body>
+    <div id= "myApp">
+          <h1>加法</h1>
+          <input type="text" v-model="value1">
+          <input type="text" v-model="value2">
+          <add-method :a="value1" :b="value2" @add_event="getAddResult"></add-method> 
+          <h3>{{result}}</h3>
+    </div>
+    <script>     
+         Vue.component('add-method',{
+               props: ['a','b'],
+               template: '<div><button @click="add">加吧</button></div>',
+               methods: {
+                   add(){
+                     var value = 0;
+                     console.log(this.a,this.b);
+                     value = this.a + this.b;
+                     console.log(value);
+                     this.$emit('add_event',{
+                        result: value 
+                     });
+                   },
+               },
+         });
+         var vue = new Vue({
+             el: '#myApp',
+             data: {
+                 result: 0,
+                 value1: 0,
+                 value2: 0,
+             },
+             methods: {
+                 getAddResult(pvalue){
+                    this.result = pvalue.result;
+                 }
+             }
+         });
+    </script>
+ </body>
+</html>
