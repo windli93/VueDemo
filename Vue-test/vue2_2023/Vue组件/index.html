@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <!-- vue 简单实例 -->
+    <!-- 引入vue脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue组件</title>
+  </head>
+  <body>
+    <div id="App">
+      <ul>
+        <my-component-li></my-component-li>
+      </ul>
+    </div>
+
+    <script>
+      //定义一个组件
+      Vue.component("my-component-li", {
+        template: "<li>Hello Vue</li>",
+      });
+      var vue = new Vue({
+        el: "#App",
+        data: {
+          message: "hello Vue 111!",
+        },
+      });
+    </script>
+  </body>
+</html>

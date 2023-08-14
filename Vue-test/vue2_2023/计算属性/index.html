@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <!-- vue 简单实例 -->
+    <!-- 引入vue脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Vue组件</title>
+  </head>
+  <body>
+    <div id="App">
+      <p>当前时间：{{getCurrentTime()}}</p>
+      <p>当前时间：{{getCurrentTime1}}</p>
+    </div>
+
+    <script>
+      var vue = new Vue({
+        el: "#App",
+        data: {},
+        //方法
+        methods: {
+          getCurrentTime: function () {
+            return Date.now();
+          },
+        },
+        //計算属性
+        computed: {
+          getCurrentTime1: function () {
+            return Date.now();
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

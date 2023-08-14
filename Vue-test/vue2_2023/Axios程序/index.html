@@ -1,0 +1,37 @@
+
+<html>
+ <head>
+     <!-- vue 简单实例 -->
+     <!-- 引入vue脚本 -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+     <!-- 引入axios框架 -->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+ <body>
+    <div id= "App">
+         <div>
+            名称：{{info.name}}
+         </div>
+         <div>
+            url ：{{info.url}}
+         </div>
+    </div>
+
+    <script>
+         var vue = new Vue({
+             el: '#App',
+             data:{
+                info: {
+                    name: '',
+                    url: ''
+                 }
+             },
+             mounted() {
+                 console.log('我进入了mounted方法');
+                 axios.get('data.json')
+                      .then(response => this.info = response.data)
+             },
+         })
+    </script>
+ </body>
+</html>

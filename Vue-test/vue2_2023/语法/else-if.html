@@ -1,0 +1,27 @@
+
+<html>
+ <head>
+     <!-- vue 简单实例 -->
+     <!-- 引入vue脚本 -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+     <title>条件渲染</title>
+ </head>
+ <body>
+    <div id= "App">
+         <div v-if="type === 'A'">Vue is awesome A</div>
+         <div v-else-if="type === 'B'">Vue is awesome B</div>
+         <div v-else-if="type === 'C'">Vue is awesome C</div>
+         <div v-else-if="type === 'D'">Vue is awesome D</div>
+         <div v-else=>NOT A/B/C/D</div>
+    </div>
+
+    <script>
+         var vue = new Vue({
+             el: '#App',
+             data: {
+                type:"D"
+             }
+         })
+    </script>
+ </body>
+</html>

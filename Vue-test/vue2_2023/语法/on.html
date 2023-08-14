@@ -1,0 +1,29 @@
+
+<html>
+ <head>
+     <!-- vue 简单实例 -->
+     <!-- 引入vue脚本 -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+     <title>条件渲染</title>
+ </head>
+ <body>
+    <div id="example-1">
+       <button v-on:click="greet">Greet</button>
+    </div>
+
+    <script>
+         var vue = new Vue({
+             el: '#example-1',
+             data: {
+                message: 'Test Data',
+             },
+             methods: {
+                greet:function(){
+                    // alert("Hello Vue");
+                    console.log(this.message);
+                }
+             },
+         })
+    </script>
+ </body>
+</html>

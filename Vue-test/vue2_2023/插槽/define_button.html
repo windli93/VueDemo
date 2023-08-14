@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <!-- vue 简单实例 -->
+    <!-- 引入vue脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>插槽</title>
+  </head>
+  <body>
+    <div id="app">
+      <todo>
+        <todo-title slot="todo-title" v-bind:title="title"></todo-title>
+        <todo-items
+          slot="todo-items"
+          v-for="(item,index) in items"
+          v-bind:item="item"
+          v-bind:index="index"
+          v-on:remove="removeItems"
+        ></todo-items>
+      </todo>
+    </div>
+
+    <script>
+      //定义代办事件组件
+      Vue.component("todo", {
+        template:
+          "<div><slot name='todo-title'></slot><ul><slot name='todo-items'></slot></ul></div>",
+      });
+      //定义子组件 标题
+      Vue.component("todo-title", {
+        props: ["title"],
+        template: "<div>{{title}}</div>",
+      });
+      //定义子组件 内容
+      Vue.component("todo-items", {
+        props: ["item", "index"],
+        template:
+          "<li>{{index}}----{{item}}<button @click='remove'>删除</button></li>",
+        methods: {
+          remove: function () {
+            this.$emit("remove");
+          },
+        },
+      });
+      var vue = new Vue({
+        el: "#app",
+        data: {
+          title: "标题",
+          items: ["小健", "大壮", "小美"],
+        },
+        methods: {
+          removeItems: function (index) {
+            this.items.splice(index, 1);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
