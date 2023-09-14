@@ -1,5 +1,5 @@
 {
-  "name": "vue_01",
+  "name": "vue_element",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "李红健 <hongjian.li@patpat.com>",
@@ -10,7 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"
+    "element-ui": "^2.15.13",
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -47,8 +49,7 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0",
-    "vue-router": "^3.5.2"
+    "webpack-merge": "^4.1.0"
   },
   "engines": {
     "node": ">= 6.0.0",
