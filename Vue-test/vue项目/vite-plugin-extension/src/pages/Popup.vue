@@ -30,52 +30,32 @@ import {
   EVENT_START_EXPORT_SEARCH_DATA,
   EVENT_START_GET_DETAIL_DATA,
 } from "../ts/event";
+import {sendTabChromeMessage} from "../ts/chrome_common";
 
 export default defineComponent({
   setup() {
     const message = "Hello, TypeScript!";
 
-    function sendChromeMessage(
-      event: string,
-      data: any,
-      callback: (response: any) => any
-    ) {
-      browser.tabs
-        .query({
-          active: true,
-          currentWindow: true,
-        })
-        .then((tabs: Tabs.Tab[]) => {
-          if (tabs.length > 0) {
-            const message = {
-              event: event,
-              data: data,
-            };
-            browser.tabs.sendMessage(tabs[0].id!, message).then((response) => {
-              return callback(response);
-            });
-          }
-        });
-    }
+ 
 
     function storeDataExport() {
       console.log("====storeDataExport=========");
-      sendChromeMessage(EVENT_START_EXPORT_STORE_DATA, {}, (response) => {});
+      sendTabChromeMessage(EVENT_START_EXPORT_STORE_DATA, {}, (response) => {});
     }
 
     function topDataExport() {
       console.log("====topDataExport=========");
-      sendChromeMessage(EVENT_START_EXPORT_TOP_DATA, {}, (response) => {});
+      sendTabChromeMessage(EVENT_START_EXPORT_TOP_DATA, {}, (response) => {});
     }
 
     function searchDataExport() {
       console.log("====searchDataExport=========");
-      sendChromeMessage(EVENT_START_EXPORT_SEARCH_DATA, {}, (response) => {});
+      sendTabChromeMessage(EVENT_START_EXPORT_SEARCH_DATA, {}, (response) => {});
     }
 
     function detailDataGet() {
       console.log("====detailDataGet=========");
-      sendChromeMessage(EVENT_START_GET_DETAIL_DATA, {}, (response) => {});
+      sendTabChromeMessage(EVENT_START_GET_DETAIL_DATA, {}, (response) => {});
     }
 
     return {

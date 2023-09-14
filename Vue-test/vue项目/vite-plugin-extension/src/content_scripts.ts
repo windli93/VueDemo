@@ -1,6 +1,6 @@
 import browser from "webextension-polyfill";
 import $ from 'jquery';
-
+import {sendMessage} from "./ts/chrome_common";
 import {SEND_STORE_PRODUCT_LIST} from "./ts/event";
 import {SEND_STORE_PRODUCT_LINK} from "./ts/event";
 import {EVENT_START_EXPORT_STORE_DATA} from "./ts/event";
@@ -31,13 +31,6 @@ function escapeCommas(text) {
     return text.replace(/\n/g, "");
 }
 
-
-function sendMessage(message, callback) {
-    browser.runtime.sendMessage(undefined, message)
-    .then(response => {
-        return callback(response);
-    });
-}
 
 //获取到初始化数据
 function getRawData() {
