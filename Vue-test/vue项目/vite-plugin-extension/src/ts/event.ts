@@ -1,6 +1,3 @@
-//发送群聊机器人消息
-export const EVENT_SEND_ROBOT_MESSAGE = "EVENT_SEND_ROBOT_MESSAGE";
-
 //批量导出店铺数据
 export const EVENT_START_EXPORT_STORE_DATA = "EVENT_START_EXPORT_STORE_DATA";
 
