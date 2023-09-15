@@ -4,20 +4,20 @@
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
       <el-menu :default-openeds="['1']">
         <el-submenu index="1">
-          <template slot="title"><i class="el-icon-message"></i>會員管理</template>
+          <template slot="title"><i class="el-icon-message"></i>会员管理</template>
           <el-menu-item-group>
             <el-menu-item index="1-1">
-                <router-link to="{name:'MemberLevel',params:{id:2}}">會員等級</router-link>
+                <router-link :to="{name:'MemberLevel',params:{id:3}}">会员等级</router-link>
             </el-menu-item>
             <el-menu-item index="1-2">
-                 <router-link to="/member/list">會員列表</router-link>
+                 <router-link to="/member/list">会员列表</router-link>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
           <template slot="title"><i class="el-icon-menu"></i>商品管理</template>
           <el-menu-item-group>
-            <el-menu-item index="2-1">商品分類</el-menu-item>
+            <el-menu-item index="2-1">商品分类</el-menu-item>
             <el-menu-item index="2-2">商品列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -35,7 +35,8 @@
             <el-dropdown-item>删除</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>王小虎</span>
+        <span>名字：{{$route.params.name}}</span>
+        <span>密码：{{$route.params.password}}</span>
       </el-header>
       <!-- Body -->
       <el-main>

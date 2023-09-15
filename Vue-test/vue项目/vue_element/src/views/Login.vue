@@ -32,11 +32,11 @@ export default {
       },
       rules: {
         name: [
-          { required: true, message: "请输入名称", trigger: "blur" },
-          { min: 3, max: 5, message: "长度在 3 到 10 个字符", trigger: "blur" },
+          {required: true, message: "请输入名称", trigger: "blur"},
+          {min: 3, max: 5, message: "长度在 3 到 10 个字符", trigger: "blur"},
         ],
         password: [
-          { required: true, message: "请输入密码", trigger: "change" },
+          {required: true, message: "请输入密码", trigger: "change"},
         ],
       },
     };
@@ -45,7 +45,10 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$router.push("/main");
+          this.$router.push({
+            name: 'main',
+            params: {name: this.form.name, password: this.form.password},
+          });
         } else {
           this.$message({
             message: "請輸入用戶名或者密碼",
@@ -68,6 +71,7 @@ export default {
   border-radius: 5px;
   box-shadow: 0 0 30px #dcdfe6;
 }
+
 .login-text {
   text-align: center;
 }
