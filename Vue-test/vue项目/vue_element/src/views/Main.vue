@@ -7,10 +7,13 @@
           <template slot="title"><i class="el-icon-message"></i>会员管理</template>
           <el-menu-item-group>
             <el-menu-item index="1-1">
-                <router-link :to="{name:'MemberLevel',params:{id:3}}">会员等级</router-link>
+                <router-link :to="{name:'memberLevel',params:{id:3}}">会员等级</router-link>
             </el-menu-item>
             <el-menu-item index="1-2">
                  <router-link to="/member/list">会员列表</router-link>
+            </el-menu-item>
+            <el-menu-item index="1-3">
+              <router-link to="/goMain/admin123">会到首页</router-link>
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -36,7 +39,6 @@
           </el-dropdown-menu>
         </el-dropdown>
         <span>名字：{{$route.params.name}}</span>
-        <span>密码：{{$route.params.password}}</span>
       </el-header>
       <!-- Body -->
       <el-main>
