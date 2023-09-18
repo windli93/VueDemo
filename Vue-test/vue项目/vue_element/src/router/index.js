@@ -39,7 +39,7 @@ export default new Router({
       redirect: '/main/:name',
     },
     // 404页面
-    { 
+    {
       path: '*',
       component: NotFound
     },
